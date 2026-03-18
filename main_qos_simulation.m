@@ -17,10 +17,10 @@ mu = 120;   % 你可自行調整，需確保總負載 < 1
 
 % 每種資料每台裝置的生成參數
 % High: Poisson arrival rate per device
-lambda_high_per_dev = 0.08;  % ECG alert / sec / device
+lambda_high_per_dev = 0.05;  % ECG alert / sec / device
 
 % Medium: periodic generation interval per device
-T_medium = 1.0;              % Heart Rate 每秒1包
+T_medium = 0.1;              % Heart Rate 每秒10包
 
 % Low: Poisson arrival rate per device
 lambda_low_per_dev = 0.2;    % Health Log / sec / device
