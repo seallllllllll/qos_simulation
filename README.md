@@ -18,6 +18,3 @@ This project simulates QoS scheduling in O-RAN-based smart healthcare systems us
 
 ## Results
 Priority scheduling significantly reduces latency for high-priority medical data but may cause starvation for low-priority traffic.
-
-## Author
-(你的名字)
