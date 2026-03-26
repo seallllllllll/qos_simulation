@@ -15,7 +15,7 @@ for g = 1:length(gates)
 
             txCount = 0;
             while ~isempty(uploadBuffer) && txCount < maxTx
-                idx = pick_packet_by_priority(uploadBuffer);
+                idx = pick_packet(uploadBuffer, params.scheduler_type);
                 pkt = uploadBuffer(idx);
 
                 if any(gates(g).delivered_ids == pkt.id)

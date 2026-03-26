@@ -39,9 +39,10 @@ for ti = 1:length(t_vec)
     % 2) 產生封包
     [runners, metrics] = generate_runner_packets(runners, params, t, metrics);
 
-    % 3) 跑者間 relay（只傳 P1）
-    [runners, metrics] = peer_relay_exchange(runners, params, metrics);
-
+    % 3) 組合不同case
+    if params.relay_enable
+        [runners, metrics] = peer_relay_exchange(runners, params, metrics);
+    end
     % 4) 進 gate 上傳
     [runners, gates, metrics] = gate_exchange(runners, gates, params, t, metrics);
 
