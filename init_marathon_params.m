@@ -10,7 +10,8 @@ params.relay_enable = true;           % true or false
 params.num_runners = 120;
 
 % 半馬 gate: Start / 5k / 10k / 15k / 20k / Finish
-params.gate_positions = [0, 5000, 10000, 15000, 20000, 21097.5];
+% params.gate_positions = [0, 5000, 10000, 15000, 20000, 21097.5];
+params.gate_positions = [0, 2500, 5000, 7500, 10000, 12500, 15000, 17500, 20000, 21097.5];
 params.num_gates = length(params.gate_positions);
 params.gate_radius = 40;               % meters
 params.gate_mu = 1;                    % packets/sec per runner contact

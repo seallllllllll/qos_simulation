@@ -28,6 +28,8 @@ metrics.track_delays = [];
 metrics.actual_gate_passages = 0;
 metrics.confirmed_gate_passages = 0;
 
+metrics.global_delivered_ids = [];
+
 t_vec = 0:params.dt:params.T_end;
 
 for ti = 1:length(t_vec)
