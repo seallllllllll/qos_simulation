@@ -68,11 +68,16 @@ for g = 1:length(gates)
             end
 
             runners(i) = remove_delivered_packets(runners(i), delivered_ids_now);
-
         end
 
     end
 
+end
+
+% ===== Global cleanup: do once per gate_exchange call =====
+for r = 1:length(runners)
+    runners(r).ownBuffer   = remove_global_delivered(runners(r).ownBuffer, metrics.global_delivered_ids);
+    runners(r).relayBuffer = remove_global_delivered(runners(r).relayBuffer, metrics.global_delivered_ids);
 end
 
 end

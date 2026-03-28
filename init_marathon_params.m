@@ -11,17 +11,17 @@ params.num_runners = 120;
 
 % 半馬 gate: Start / 5k / 10k / 15k / 20k / Finish
 % params.gate_positions = [0, 5000, 10000, 15000, 20000, 21097.5];
-params.gate_positions = [0, 2500, 5000, 7500, 10000, 12500, 15000, 17500, 20000, 21097.5];
+params.gate_positions = [0, 3500, 7000, 10500, 14000, 17500, 21097.5];
 params.num_gates = length(params.gate_positions);
-params.gate_radius = 40;               % meters
-params.gate_mu = 1;                    % packets/sec per runner contact
+params.gate_radius = 25;               % meters
+params.gate_mu = 0.5;                    % packets/sec per runner contact
 
 params.peer_range = 8;                 % meters
 
 % Priority generation
-params.lambda_p1 = 2e-5;               % rare event per sec
-params.lambda_p2 = 1e-4;               % abnormal event per sec
-params.p3_period = 20;                 % every 30 sec
+params.lambda_p1 = 5e-5;               % rare event per sec
+params.lambda_p2 = 2e-4;               % abnormal event per sec
+params.p3_period = 15;                 % every 10 sec
 params.track_periodic_enable = false;  % track 改由 gate entry event 觸發
 
 % TTL
