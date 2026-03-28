@@ -4,16 +4,16 @@ params.race_length = 21.0975 * 1000;   % meters
 params.dt = 1.0;                       % second
 params.T_end = 3 * 3600;               % 3 hours
 
-params.scheduler_type = 'FIFO';   % 'PRIORITY' or 'FIFO'
+params.scheduler_type = 'PRIORITY';   % 'PRIORITY' or 'FIFO'
 params.relay_enable = true;           % true or false
 
-params.num_runners = 120;
+params.num_runners = 240;
 
 % 半馬 gate: Start / 5k / 10k / 15k / 20k / Finish
 % params.gate_positions = [0, 5000, 10000, 15000, 20000, 21097.5];
 params.gate_positions = [0, 3500, 7000, 10500, 14000, 17500, 21097.5];
 params.num_gates = length(params.gate_positions);
-params.gate_radius = 25;               % meters
+params.gate_radius = 20;               % meters
 params.gate_mu = 0.5;                    % packets/sec per runner contact
 
 params.peer_range = 8;                 % meters
